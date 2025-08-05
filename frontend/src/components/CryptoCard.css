@@ -1,0 +1,384 @@
+.crypto-card {
+  background-color: var(--card-background);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.crypto-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.crypto-card.selected {
+  border: 2px solid var(--primary-color);
+}
+
+.crypto-card.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.loading-text {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Header */
+.crypto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.crypto-title h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.crypto-title p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.remove-btn:hover {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+/* Precio */
+.crypto-price-section {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.current-price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.price-change {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.price-change.positive {
+  color: var(--success-color);
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.price-change.negative {
+  color: var(--danger-color);
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.price-change.neutral {
+  color: var(--text-secondary);
+  background-color: var(--background-color);
+}
+
+.change-icon {
+  font-size: 0.875rem;
+}
+
+/* Estadísticas */
+.crypto-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.stat-value.positive {
+  color: var(--success-color);
+}
+
+.stat-value.negative {
+  color: var(--danger-color);
+}
+
+.stat-value.neutral {
+  color: var(--text-secondary);
+}
+
+/* Información adicional */
+.crypto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.info-label {
+  color: var(--text-secondary);
+}
+
+.info-value {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Botón de gráfico */
+.chart-btn {
+  width: 100%;
+  padding: 0.625rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chart-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.crypto-card.selected .chart-btn {
+  background-color: var(--success-color);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .crypto-card {
+    padding: 1rem;
+  }
+  
+  .current-price {
+    font-size: 1.5rem;
+  }
+  
+  .crypto-stats {
+    gap: 0.25rem;
+    padding: 0.5rem;
+  }
+}
+/* Agregar estos estilos al archivo existente CryptoCard.css */
+
+.crypto-main-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crypto-rank {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background-color: var(--background-color);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+/* Indicador de tendencia */
+.trend-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: var(--background-color);
+  border-radius: 0.375rem;
+}
+
+.trend-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trend-badge.very-bullish {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #047857;
+}
+
+.trend-badge.bullish {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #15803d;
+}
+
+.trend-badge.neutral {
+  background-color: rgba(107, 114, 128, 0.2);
+  color: #4b5563;
+}
+
+.trend-badge.bearish {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #dc2626;
+}
+
+.last-update {
+  font-size: 0.625rem;
+  color: var(--text-secondary);
+}
+
+/* Métricas adicionales */
+.crypto-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.metric {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--background-color);
+  border-radius: 0.375rem;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.625rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Acciones de la tarjeta */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chart-btn {
+  flex: 1;
+}
+
+.details-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.details-btn:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* Loading skeleton mejorado */
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 0.25rem;
+}
+
+.loading-skeleton.title {
+  height: 24px;
+  width: 60%;
+}
+
+.loading-skeleton.price {
+  height: 32px;
+  width: 80%;
+}
+
+.loading-skeleton.stats {
+  height: 60px;
+  width: 100%;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .crypto-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .trend-indicator {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
