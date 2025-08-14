@@ -173,7 +173,7 @@ function App() {
         <div className="footer-container">
           <p>© 2025 CryptoInvestment</p>
           <span className="separator">•</span>
-          <p>Datos en tiempo real por CoinMarketCap</p>
+          <p>Datos en tiempo real por CoinMarketCap diseñado y creado por jose alberto bahena sosa</p>
         </div>
       </footer>
     </div>
