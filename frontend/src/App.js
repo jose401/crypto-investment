@@ -171,7 +171,7 @@ function App() {
 
       <footer className="app-footer">
         <div className="footer-container">
-          <p>© 2024 CryptoInvestment</p>
+          <p>© 2025 CryptoInvestment</p>
           <span className="separator">•</span>
           <p>Datos en tiempo real por CoinMarketCap</p>
         </div>
